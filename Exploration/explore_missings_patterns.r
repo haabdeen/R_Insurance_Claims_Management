@@ -1,4 +1,4 @@
-source(paste(dir_exploration, "/visualize_missings_patterns_Funcs.r", sep=""))
+source(paste(dir_exploration_functions, "/visualize_missings_patterns_Func.r", sep=""))
 
 visualize_missings_patterns(data.all, 
                             subfeatures = features.updated,

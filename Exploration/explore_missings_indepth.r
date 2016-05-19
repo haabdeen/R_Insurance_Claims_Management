@@ -1,16 +1,9 @@
-
+source(paste(dir_exploration_functions, "/getMissingsFreq_Func.r", sep=""))
 
 # let's have a look on the variables which involve high frequency of missing data
 # let's show variables whereas NA frequency >= 40%
-Temp <- apply(all_data[, 
-                       features, 
-                       drop = FALSE ], 
-              2,
-              function(x){
-                sum(is.missing(x))/nrow(all_data)
-              })
-Temp <- sort(round(subset(Temp, Temp >= 0.4), 
-                   3), 
+Temp <- getMissingsFreq(data.all, subfeatures = features.updated)
+Temp <- sort(round(subset(Temp, Temp >= 0.4), 3), 
              decreasing =  T)
 # v30  v113  v102   v23   v51   v85  v119  v123   v16   v69   v78  v115  v131    v1    v2    v4 
 # 0.527 0.484 0.449 0.443 0.443 0.443 0.443 0.443 0.437 0.437 0.437 0.437 0.437 0.436 0.436 0.436 
@@ -27,18 +20,7 @@ Temp <- sort(round(subset(Temp, Temp >= 0.4),
 # v89  v108  v109  v117  v124  v128 
 # 0.425 0.425 0.425 0.425 0.425 0.425
 
-#features.withFreqMissings <- names(Temp)
-#hardly coding it:
-features.withFreqMissings <- c("v30", "v113", "v102", "v23", "v51", "v85", "v119", "v123", "v16", "v69", 
-                               "v78", "v115", "v131", "v1", "v2", "v4", "v6", "v7", "v9", "v11", "v13", 
-                               "v15", "v17", "v18", "v19", "v20", "v26", "v27", "v28", "v29", "v32", "v33", 
-                               "v35", "v37", "v39", "v41", "v42", "v43", "v44", "v45", "v48", "v49", "v53", 
-                               "v55", "v57", "v58", "v59", "v60", "v61", "v64", "v65", "v67", "v68", "v73", 
-                               "v76", "v77", "v80", "v83", "v84", "v86", "v88", "v90", "v92", "v93", "v94", 
-                               "v95", "v96", "v97", "v99", "v100", "v101", "v103", "v104", "v106", "v111", 
-                               "v116", "v118", "v120", "v121", "v122", "v126", "v127", "v130", "v87", "v98", 
-                               "v105", "v5", "v8", "v25", "v36", "v46", "v54", "v63", "v70", "v81", "v82", 
-                               "v89", "v108", "v109", "v117", "v124", "v128")
+features.withFreqMissings <- names(Temp)
 length(features.withFreqMissings)
 # in 102 variables missing data represents more than 40% of the variable data
 

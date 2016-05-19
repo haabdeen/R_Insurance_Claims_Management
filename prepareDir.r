@@ -9,4 +9,5 @@ prepare_directories <- function(working_dir) {
   dir_cleaning <<- paste(working_dir, "/Cleaning", sep = "")
   dir_exploration <<- paste(working_dir, "/Exploration", sep = "")
   dir_exploration_figures <<- paste(dir_exploration, "/Figures", sep = "")
+  dir_exploration_functions <<- paste(dir_exploration, "/Functions", sep = "")
 }
