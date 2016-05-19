@@ -33,3 +33,13 @@ updateFeatures <- function(featuresList){
   print("Counter of Numeric Continuous selected features: ")
   print(length(features.numeric.continuous.updated))
 }
+
+dropFeatures <- function(fs){
+  updateFeatures(subset(features.updated, 
+                        !(features.updated %in% 
+                            fs)))
+}
+
+addFeatures <- function(fs){
+  updateFeatures(c(features.updated, fs))
+}

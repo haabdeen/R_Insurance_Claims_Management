@@ -64,17 +64,6 @@ getStatsOnRows <- function(df, replaceMissings = FALSE, replaceMissingsBy = miss
   }
   return(Temp)
 }
-
-
-# find features with near zero variance
-findNZV <- function(x, freqCut = 95/5, saveMetrics = T, foreach = T, allowParallel = T, subfeatures = NULL, verbos = T){
-  require(caret)
-  if(is.null(subfeatures)) subfeatures <- names(x)
-  Temp <- nearZeroVar(x[, subfeatures], freqCut = 95/5, saveMetrics = T, foreach = T, allowParallel = T)
-  Temp <- Temp[Temp$nzv,]
-  if(verbos) print(Temp)
-  return(row.names(Temp))
-}
 #====================================================================
 # End Functions
 #====================================================================

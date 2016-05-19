@@ -1,4 +1,4 @@
-if(!exists("trimspaces")) {
+if(!exists("trimspaces", envir = globalenv())) {
   source(paste(dir_lib, "/characterDataFuncs.r", sep = ""))
 }
 

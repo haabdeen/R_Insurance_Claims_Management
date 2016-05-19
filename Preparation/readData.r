@@ -2,10 +2,10 @@
 # Read train and test datasets
 #====================================================================
 
-data.train <- read.csv(paste(data_input_dir, "/train.csv", sep = ""), stringsAsFactors= F) 
+data.train <- read.csv(paste(dir_data_input, "/train.csv", sep = ""), stringsAsFactors= F) 
 print(dim(data.train))
 
-data.test <- read.csv(paste(data_input_dir, "/test.csv", sep = ""), stringsAsFactors= F) 
+data.test <- read.csv(paste(dir_data_input, "/test.csv", sep = ""), stringsAsFactors= F) 
 print(dim(data.test))
 
 
