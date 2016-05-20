@@ -12,3 +12,7 @@ features.withFreqMissings <- c("v30", "v113", "v102", "v23", "v51", "v85", "v119
 # Drop features with frequent missings except v113 
 dropFeatures(subset(features.withFreqMissings, 
                     features.withFreqMissings !="v113")) 
+
+features.withMissings <- c("v113", "v56", "v31", "v21", "v22", "v112", 
+                           "v125", "v34", "v40", "v10", "v12", "v50", 
+                           "v114", "v14", "v52", "v91", "v107")

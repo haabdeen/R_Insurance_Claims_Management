@@ -114,3 +114,5 @@ html.data.frame(incompleteCasesDistribution,
 #   - these variables may represent important predictors, specially those which involve many icomplete cases
 #     such as v113, v56 and v31
 #   - incomplete cases in these variables should be replaced by a specific value that keep these cases as flagged
+
+features.withMissings <- as.character(incompleteCasesDistribution$var)
