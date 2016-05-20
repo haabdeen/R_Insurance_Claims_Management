@@ -5,7 +5,7 @@ getMissingsFreq <- function(df, subfeatures = NULL) {
   Temp <- apply(df,
                 2,
                 function(x) {
-                  sum(is.na(x)) / nrow(df) #IMPORTANT: missing data must be unified and represented by NAs
+                  sum(is.na(x)) / nrow(df) #IMPORTANT: missing data must be uniformed and represented by NAs
                 })
   return(Temp)
 }
