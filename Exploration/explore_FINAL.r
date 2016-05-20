@@ -16,3 +16,7 @@ dropFeatures(subset(features.withFreqMissings,
 features.withMissings <- c("v113", "v56", "v31", "v21", "v22", "v112", 
                            "v125", "v34", "v40", "v10", "v12", "v50", 
                            "v114", "v14", "v52", "v91", "v107")
+
+# Drop numeric vars which have strong colinearity with other numeric vars 
+colinearVars <- c("v10", "v34")
+dropFeatures(colinearVars)
