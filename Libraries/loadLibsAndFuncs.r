@@ -1,6 +1,7 @@
 # Load all required libraries for this project
 
 load_Libs_Funcs <- function(lib_directory) {
+  cat("\nLoading external libraries and required functions\n")
   source(paste(lib_directory, "/lib.r", sep = ""))
   source(paste(lib_directory, "/functions.r", sep = ""))
   source(paste(lib_directory, "/staticDataManipluationFuncs.r", sep = ""))

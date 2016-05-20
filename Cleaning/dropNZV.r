@@ -10,7 +10,7 @@ findNZV <- function(x, freqCut = 95/5, saveMetrics = T, foreach = T, allowParall
   return(row.names(Temp))
 }
 
-# find and drop features with near zero variance in data.all
+cat("\nFind and drop features with near zero variance in data.all\n")
 features.nzv <- findNZV(data.all, subfeatures = features.updated)
 dropFeatures(features.nzv)
 
