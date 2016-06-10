@@ -10,8 +10,3 @@ sources[["uniformingMissingDataByNA"]] <- paste(dir_cleaning, "/uniformingMissin
 sources[["dropFeaturesWithNZV"]] <- paste(dir_cleaning, "/dropNZV.r", sep = "")
 
 sapply(sources, source)
-
-# source(paste(dir_lib, "/loadLibsAndFuncs.r", sep = ""))
-# source(paste(dir_preparation, "/readData.r", sep = ""))
-# source(paste(dir_cleaning, "/uniformingMissingData.r", sep = ""))
-# source(paste(dir_cleaning, "/dropNZV.r", sep = ""))
